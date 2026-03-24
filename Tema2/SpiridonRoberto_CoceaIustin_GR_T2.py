@@ -1,3 +1,8 @@
+#SPIRIDON ROBERTO,310910401RSL231204 robertospiridon1@gmail.com,Roberto Spiridon(roberto_san)
+#COCEA IUSTIN, 310910401RSL231054, coceaiustin2004@gmail.com, Cocea Iustin(iustin.cocea)
+#Procent AI: 30%
+#Surse bibliografice: din fisa si https://en.wikipedia.org/wiki/Cholesky_decomposition
+
 import numpy as np
 import scipy.linalg as la
 import math
@@ -107,7 +112,7 @@ def inmultire_Ainit_x(A, x, n):
 def main():
    
     try:
-        n_val = input("Introduceti dimensiunea sistemului n (ex: 3) (se recomanda valoare mica pentru test vizual): ")
+        n_val = input("Introduceti dimensiunea sistemului n (ex: 3)")
         n = int(n_val) if n_val.strip() else 3
         t_val = input("Introduceti exponentul t pentru precizie epsilon = 10^-t (ex: 8): ")
         t = int(t_val) if t_val.strip() else 9
@@ -141,10 +146,10 @@ def main():
     det_A = np.prod(d)
     print(f"Determinantul matricei A este: {det_A:.6e}")
     
-    print("Se calculează solutia folosind substitutiile...")
+    print("Se calculează solutia folosind substitutiile")
     x_chol = rezolvare_ldlt(A_lucru, d, b, n)
     
-    print("\n3. Verificarea soluției...")
+    print("\n3. Verificarea soluției")
     
     Ax_chol = inmultire_Ainit_x(A_lucru, x_chol, n)
     
